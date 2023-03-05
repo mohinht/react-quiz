@@ -22,7 +22,7 @@ export default function useVideoList(page) {
       const videosRef = ref(db, "videos");
       const videoQuery = query(
         videosRef,
-        limitToFirst(6),
+        limitToFirst(10),
         orderByKey(),
         startAt("" + page)
       );
